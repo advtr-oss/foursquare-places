@@ -4,8 +4,7 @@
   "description": "This is a javascript wrapper for Foursquare's APIs",
   "main": "index.babel.js",
   "scripts": {
-    "test": "jest",
-    "postinstall": "babel lib -d dist && babel index.js --out-file index.babel.js && perl -i -pe's/lib/dist/gi' index.babel.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
