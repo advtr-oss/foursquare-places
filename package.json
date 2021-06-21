@@ -4,7 +4,8 @@
   "description": "This is a javascript wrapper for Foursquare's APIs",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "babel lib -d dist && babel index.js --out-file index.babel.js && perl -i -pe's/lib/dist/gi' index.babel.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
   },
   "homepage": "https://github.com/foursquare/foursquare-places#readme",
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "babel-jest": "27.0.2",
